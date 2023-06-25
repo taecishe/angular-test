@@ -1,0 +1,102 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html, body {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/20150727-teriyaki-burger-recipe-15-thumb-1500xauto-425275.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.menu {
+  width: 45em;
+  height: 25em;
+  display: inline-flex;
+  overflow: hidden;
+}
+.menu_item {
+  width: 22em;
+  height: 25em;
+  background: #ABAf7C;
+  transform: scale(1.15);
+  z-index: 1;
+}
+.menu_item__inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column wrap;
+  height: 90%;
+}
+.menu_item__inner h2 {
+  color: #FFF;
+}
+.menu_item__nav {
+  position: absolute;
+  margin: 22.5em -3em;
+  z-index: 2;
+}
+.menu_item__nav i {
+  margin: 0 7em;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all ease-in-out 0.45s;
+  cursor: pointer;
+}
+.menu_item__nav i:hover {
+  color: white;
+}
+.menu_recipe {
+  width: 23em;
+  height: 25em;
+  background: #2B3638;
+  transform: scale(0.9);
+}
+.menu_recipe__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.menu_recipe__list h2 {
+  position: absolute;
+  text-align: center;
+  margin: 1.2em auto;
+  left: 0;
+  right: 0;
+  color: #FFF;
+}
+.menu_recipe__list ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 50%;
+  width: 75%;
+  margin: 7em auto;
+}
+.menu_recipe__list li {
+  list-style: none;
+  color: #FFF;
+  font-weight: 300;
+}
+.menu_recipe__list li:before {
+  font-family: FontAwesome;
+  font-size: 0.5em;
+  padding: 0.6em;
+  content: "";
+  display: block;
+  color: #2B3638;
+  background: #FFF;
+  border-radius: 100%;
+  float: left;
+  margin: 0 1em 0 0;
+}

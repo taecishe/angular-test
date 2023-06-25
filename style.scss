@@ -1,0 +1,104 @@
+// Variables
+$primary: #ABAf7C;
+$secondary: #2B3638;
+
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+html,body {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/20150727-teriyaki-burger-recipe-15-thumb-1500xauto-425275.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.menu {
+  width: 45em;
+  height: 25em;
+  display: inline-flex;
+  overflow: hidden;
+  &_item {
+    width: 22em;
+    height: 25em;
+    background: $primary;
+    transform: scale(1.15);
+    z-index: 1;
+    &__inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-flow: column wrap;
+      height: 90%;
+      h2 {
+        color: #FFF;
+      }
+    }
+    &__nav {
+      position: absolute;
+      margin: 22.5em -3em;
+      z-index: 2;
+      i {
+        margin: 0 7em;
+        color: rgba(255, 255, 255, 0.7);
+        transition: all ease-in-out .45s;
+        cursor: pointer;
+        &:hover {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+  &_recipe {
+    width: 23em;
+    height: 25em;
+    background: $secondary;
+    transform: scale(0.9);
+    &__list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      height: 100%;
+      position: relative;
+      h2 {
+        position: absolute;
+        text-align: center;
+        margin: 1.2em auto;
+        left: 0;
+        right: 0;
+        color: #FFF;
+      }
+      ul {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        height: 50%;
+        width: 75%;
+        margin: 7em auto;
+      }
+      li {
+        list-style: none;
+        color: #FFF;
+        font-weight: 300;
+        &:before {
+          font-family: FontAwesome;
+          font-size: 0.5em;
+          padding: 0.6em;
+          content: '\f00c';
+          display: block;
+          color: $secondary;
+          background: #FFF;
+          border-radius: 100%;
+          float: left;
+          margin: 0 1em 0 0;
+        }
+      }
+    }
+  }
+}

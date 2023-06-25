@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Angular Cookbook</title>
+  <link href='https://fonts.googleapis.com/css?family=Nunito:300,400,700' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body ng-app='recipeFinder' ng-cloak='true'>
+  <div class='menu' ng-controller='ItemListController as vm'>
+    <div class='menu_item'>
+      <div class='menu_item__inner' ng-repeat='item in vm.items' ng-show='item.id == vm.index'>
+        <h2>{{ item.name }}</h2>
+        <img height='auto' src='{{item.image}}' width='200'>
+      </div>
+    </div>
+    <div class='menu_item__nav'>
+      <i class='fa fa-chevron-left' ng-click='vm.prev()'></i>
+      <i class='fa fa-chevron-right' ng-click='vm.next()'></i>
+    </div>
+    <div class='menu_recipe'>
+      <div class='menu_recipe__list' ng-repeat='item in vm.items' ng-show='item.id == vm.index'>
+        <h2>{{item.name}} Ingredients</h2>
+        <ul>
+          <li ng-repeat='i in item.ingredients'>
+            {{ i }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
